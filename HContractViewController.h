@@ -16,3 +16,6 @@ typedef void(^HContractCallBackFail)(void);
 @property (nonatomic ,copy) HContractCallBackFail ContractCallBackFail;
 @end
 
+NS_ASSUME_NONNULL_END
+
+
