@@ -8,9 +8,11 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-
-@interface HContractViewController : UIViewController
+typedef void(^HContractCallBackSuccess)();
+typedef void(^HContractCallBackFail)();
+@interface HContractViewController1 : UIViewController
 @property (nonatomic ,copy) NSString *orderNo;
+@property (nonatomic ,copy) HContractCallBackSuccess ContractCallBackSuccess;
+@property (nonatomic ,copy) HContractCallBackFail ContractCallBackFail;
 @end
 
-NS_ASSUME_NONNULL_END

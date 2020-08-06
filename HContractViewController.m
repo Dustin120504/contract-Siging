@@ -29,6 +29,12 @@ WKNavigationDelegate>
     /*
      *.添加KVO，WKWebView有一个属性estimatedProgress，就是当前网页加载的进度，所以监听这个属性。
      */
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.ContractCallBackSuccess();
+    });
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.ContractCallBackFail();
+    });
     [self startLoad];
 }
 - (WKWebViewConfiguration *)wkConfig {
@@ -127,10 +133,10 @@ WKNavigationDelegate>
             if ([url containsString:@"contractsignresult"]) {
                 if ([[url componentsSeparatedByString:@":"][1] isEqualToString:@"success"]) {
                     //签署成功
-//                    [self alert:@"签署成功"];
+                    self.ContractCallBackSuccess();
                 }else {
                     //签署失败
-//                   [self alert:[NSString stringWithFormat:@"%@",[url componentsSeparatedByString:@"message="][1]]];
+                    self.ContractCallBackFail();
                 }
             }
         } @catch (NSException *exception) {
