@@ -7,7 +7,6 @@
 //
 
 
-NS_ASSUME_NONNULL_BEGIN
 typedef void(^HContractCallBackSuccess)(void);
 typedef void(^HContractCallBackFail)(void);
 @interface HContractViewController : UIViewController
@@ -15,7 +14,5 @@ typedef void(^HContractCallBackFail)(void);
 @property (nonatomic ,copy) HContractCallBackSuccess ContractCallBackSuccess;
 @property (nonatomic ,copy) HContractCallBackFail ContractCallBackFail;
 @end
-
-NS_ASSUME_NONNULL_END
 
 
