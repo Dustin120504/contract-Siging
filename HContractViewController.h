@@ -10,7 +10,7 @@
 NS_ASSUME_NONNULL_BEGIN
 typedef void(^HContractCallBackSuccess)();
 typedef void(^HContractCallBackFail)();
-@interface HContractViewController1 : UIViewController
+@interface HContractViewController : UIViewController
 @property (nonatomic ,copy) NSString *orderNo;
 @property (nonatomic ,copy) HContractCallBackSuccess ContractCallBackSuccess;
 @property (nonatomic ,copy) HContractCallBackFail ContractCallBackFail;
