@@ -8,8 +8,8 @@
 
 
 NS_ASSUME_NONNULL_BEGIN
-typedef void(^HContractCallBackSuccess)();
-typedef void(^HContractCallBackFail)();
+typedef void(^HContractCallBackSuccess)(void);
+typedef void(^HContractCallBackFail)(void);
 @interface HContractViewController : UIViewController
 @property (nonatomic ,copy) NSString *orderNo;
 @property (nonatomic ,copy) HContractCallBackSuccess ContractCallBackSuccess;
