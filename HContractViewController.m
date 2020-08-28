@@ -132,8 +132,8 @@ WKNavigationDelegate>
                     //签署失败
                     self.ContractCallBackFail();
                 }
-            }else if ([url isEqualToString:@"contractBack:success"]) {//返回
-                [self.navigationController popViewControllerAnimated:YES];
+            }else if ([url isEqualToString:@"contractback:success"]) {//返回
+                self.ContractCallBackFail();//返回和签署失败，回调一样
             }
         } @catch (NSException *exception) {
             NSLog(@"%@",exception);
