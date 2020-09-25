@@ -53,7 +53,7 @@ WKNavigationDelegate>
     return _wkWebView;
 }
 - (void)startLoad {
-    NSURLRequest * request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"http://xd.dev.deepvision.link/app/contract.html?orderNo=%@",self.orderNo]]
+    NSURLRequest * request = [[NSURLRequest alloc]initWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"https://xd.deepvision.link/app/contract.html?orderNo=%@",self.orderNo]]
                                                   cachePolicy:NSURLRequestUseProtocolCachePolicy
                                               timeoutInterval:15.0f];
     [self.wkWebView loadRequest:request];
